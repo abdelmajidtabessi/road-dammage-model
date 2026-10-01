@@ -1,6 +1,13 @@
 # Road Damage Detection
 
-A YOLO-based computer vision project for detecting road defects such as potholes, cracks, and manholes from road images.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/YOLOv8%2Fv11-Object%20Detection-00D4FF" alt="YOLO Detection" />
+  <img src="https://img.shields.io/badge/Streamlit-App-FF4B4B?logo=streamlit&logoColor=white" alt="Streamlit" />
+  <img src="https://img.shields.io/badge/Status-Ready-brightgreen" alt="Status" />
+</p>
+
+A smart road inspection system for detecting potholes, cracks, and manholes using YOLO-based computer vision.
 
 ![Road damage detection cover](assets/road-damage-cover.png)
 
@@ -69,6 +76,13 @@ streamlit run app.py
 - The app loads the exported YOLO weights for inference.
 - The evaluation summary is stored in `results/results_summary.json` and can be used for comparison and reporting.
 - The trained weights are kept locally and excluded from GitHub to keep the repo lightweight.
+
+## Demo highlights
+
+- Upload a road image and run detection with a trained YOLO model
+- View bounding boxes and confidence scores directly in the app
+- Compare multiple model variants using the evaluation summary
+- Inspect damage hotspots via the generated heatmap for better prioritization
 
 ## Use case
 
