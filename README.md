@@ -1,37 +1,23 @@
 # Road Damage Detection
 
-This project is structured to mirror the project layout used in the reference violence-detection repository while adapting it to road damage inspection with exported YOLO model weights.
+A YOLO-based computer vision project for detecting road defects such as potholes, cracks, and manholes from road images.
 
-## Project structure
+![Road damage detection cover](assets/road-damage-cover.png)
 
-```text
-road dammage model/
-├── exported_models/                # Trained YOLO weights and evaluation summary
-│   ├── results_summary.json
-│   ├── yolov11n_best.pt
-│   ├── yolov5su_best.pt
-│   ├── yolov8m_best.pt
-│   ├── yolov8n_best.pt
-│   └── yolov8s_best.pt
-├── notebooks/
-│   ├── drafts/                    # Experimental notebooks
-│   └── final/
-│       └── road-damage-detection-final.ipynb
-├── streamlit_app/
-│   ├── app.py                     # Inference UI for uploaded images
-│   ├── requirements.txt
-│   └── models/
-│       └── config.json
-├── results/
-│   └── results_summary.json
-├── .gitignore
-├── requirements.txt
-└── README.md
-```
+## Project overview
 
-## Overview
+This repository contains a complete pipeline for training, comparing, and deploying multiple YOLO model variants for road damage inspection. The project is designed to support both notebook-based experimentation and a simple interactive Streamlit app for inference from uploaded images.
 
-The project evaluates multiple YOLO variants for road damage detection, including:
+The main goals are:
+
+- detect road damage objects automatically from images
+- compare several YOLO backbones for performance and reliability
+- visualize prediction quality with heatmaps and sample comparisons
+- deploy a lightweight inspection dashboard for real-world use
+
+## Models evaluated
+
+The project compares these models:
 
 - YOLOv8n
 - YOLOv8s
@@ -39,7 +25,26 @@ The project evaluates multiple YOLO variants for road damage detection, includin
 - YOLOv5s-u
 - YOLOv11n
 
-The exported model files under `exported_models/` are ready for deployment or further experimentation.
+## Repository structure
+
+```text
+road dammage model/
+├── assets/
+│   └── road-damage-cover.png
+├── notebooks/
+│   └── road-damage-detection-final.ipynb
+├── streamlit_app/
+│   ├── app.py
+│   ├── requirements.txt
+│   └── models/
+│       └── config.json
+├── results/
+│   └── results_summary.json
+├── .gitignore
+├── README.md
+├── requirements.txt
+└── exported_models/   # local trained weights, ignored in GitHub
+```
 
 ## Quick start
 
@@ -60,6 +65,16 @@ streamlit run app.py
 
 ## Notes
 
-- The app loads the trained weights from `exported_models/`.
-- The results summary is stored in both `exported_models/results_summary.json` and `results/results_summary.json` for easy reporting and dashboard work.
-- This project structure keeps the workflow close to the repository pattern: notebooks, app, and results are separated cleanly.
+- The notebook in `notebooks/road-damage-detection-final.ipynb` walks through the full workflow from dataset splitting to model evaluation.
+- The app loads the exported YOLO weights for inference.
+- The evaluation summary is stored in `results/results_summary.json` and can be used for comparison and reporting.
+- The trained weights are kept locally and excluded from GitHub to keep the repo lightweight.
+
+## Use case
+
+This system is useful for:
+
+- road inspection teams
+- infrastructure monitoring dashboards
+- maintenance prioritization based on detected damage severity
+- rapid visual assessment of road condition using AI
