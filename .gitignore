@@ -9,6 +9,4 @@ venv/
 streamlit_app/.streamlit/
 *.log
 tmp_uploaded_image.png
-exported_models/*.pt
-exported_models/*.zip
-exported_models/*.png
+exported_models/
