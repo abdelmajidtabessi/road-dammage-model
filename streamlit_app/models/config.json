@@ -1,0 +1,13 @@
+{
+  "project_name": "Road Damage Detection",
+  "default_model": "yolov8n_best.pt",
+  "available_models": [
+    "yolov8n_best.pt",
+    "yolov8s_best.pt",
+    "yolov8m_best.pt",
+    "yolov5su_best.pt",
+    "yolov11n_best.pt"
+  ],
+  "confidence": 0.25,
+  "image_size": 640
+}

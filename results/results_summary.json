@@ -1,0 +1,72 @@
+[
+  {
+    "model": "yolov8n",
+    "mAP50": 0.4992,
+    "mAP5095": 0.2155,
+    "precision": 0.4692,
+    "recall": 0.5422,
+    "avg_damage_area_percent": 2.14,
+    "risk_distribution": {
+      "Low": 123,
+      "Medium": 76,
+      "High": 11,
+      "Critical": 0
+    }
+  },
+  {
+    "model": "yolov8s",
+    "mAP50": 0.5039,
+    "mAP5095": 0.2199,
+    "precision": 0.543,
+    "recall": 0.5077,
+    "avg_damage_area_percent": 2.27,
+    "risk_distribution": {
+      "Low": 138,
+      "Medium": 77,
+      "High": 18,
+      "Critical": 0
+    }
+  },
+  {
+    "model": "yolov8m",
+    "mAP50": 0.511,
+    "mAP5095": 0.2226,
+    "precision": 0.6048,
+    "recall": 0.4768,
+    "avg_damage_area_percent": 1.8,
+    "risk_distribution": {
+      "Low": 132,
+      "Medium": 79,
+      "High": 11,
+      "Critical": 0
+    }
+  },
+  {
+    "model": "yolov5su",
+    "mAP50": 0.5089,
+    "mAP5095": 0.2234,
+    "precision": 0.6009,
+    "recall": 0.4832,
+    "avg_damage_area_percent": 2.07,
+    "risk_distribution": {
+      "Low": 158,
+      "Medium": 87,
+      "High": 18,
+      "Critical": 0
+    }
+  },
+  {
+    "model": "yolov11n",
+    "mAP50": 0.5256,
+    "mAP5095": 0.226,
+    "precision": 0.5555,
+    "recall": 0.5092,
+    "avg_damage_area_percent": 2.18,
+    "risk_distribution": {
+      "Low": 117,
+      "Medium": 81,
+      "High": 12,
+      "Critical": 0
+    }
+  }
+]
